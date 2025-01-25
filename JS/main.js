@@ -44,7 +44,7 @@ let index;
 index = trovaMinore(bike
 );
 
-console.log(`la bici che pesa meno pesa ${bike[index].weight}kg ed è la ${bike[index].nome}`)
+console.log(`la bici meno pesante è la ${bike[index].nome} che pesa ${bike[index].weight} kg`)
 
 
 
