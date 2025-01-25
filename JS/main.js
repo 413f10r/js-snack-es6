@@ -3,6 +3,49 @@ Creare un array di oggetti:
 Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
 Stampare a schermo la bici con peso minore.*/
 
+const bike = [
+    {
+        nome: "Mountain Bike Classic",
+        weight: 9
+    },
+    {
+        nome: "Mountain Bike Energy",
+        weight: 22
+    },
+    {
+        nome: "Mountain Bike Blue",
+        weight: 13
+    }
+]
+function trovaMinore(arrayObj) {
+    for (let i = 0; i < arrayObj.length; i++) {
+        for (let x = i + 1; x < arrayObj.length; x++) {
+            if (arrayObj[i].weight <= arrayObj[x].weight) {
+                if (x == (arrayObj.length - 1)) {
+                    index = i;
+                    x = arrayObj.length + 1;
+                    i = arrayObj.length + 1;
+                } else {
+                    index = i;
+                }
+            } else {
+                if ((x == (arrayObj.length - 1) && (i == (arrayObj.length - 2)))) {
+                    index = x;
+                } else {
+                    x = arrayObj.length + 1;
+                }
+            }
+        }
+    }
+
+    return index;
+};
+let index;
+index = trovaMinore(bike
+);
+
+console.log(`la bici che pesa meno pesa ${bike[index].weight}kg ed è la ${bike[index].nome}`)
+
 
 
 
